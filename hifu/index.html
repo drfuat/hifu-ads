@@ -110,6 +110,13 @@ footer{background:#1d1d1c;color:#8e8983;border-top:1px solid rgba(255,255,255,.0
 }
 </style>
   <link rel="canonical" href="https://ads.fuatyurtseven.com/hifu/">
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-11094009700"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'AW-11094009700');
+</script>
 </head>
 <body>
 <header>
@@ -204,5 +211,29 @@ footer{background:#1d1d1c;color:#8e8983;border-top:1px solid rgba(255,255,255,.0
 </main>
 <footer>© Dr. Fuat Yurtseven · Bilgilendirme amaçlıdır. Uygunluk hekim değerlendirmesiyle belirlenir.</footer>
 <div class="mobile-call" aria-label="Mobil hızlı iletişim"><a class="call js-phone-call" data-conversion="phone_call" href="tel:+905411169690">Kliniği Ara</a><a class="book js-whatsapp-appointment" data-conversion="whatsapp_appointment" href="https://wa.me/905411169690?text=Merhaba%2C%20HIFU%20uygulamas%C4%B1%20hakk%C4%B1nda%20bilgi%20almak%20ve%20randevu%20talep%20etmek%20istiyorum." target="_blank" rel="noopener noreferrer">Randevu Talebi</a></div>
+<script>
+(function(){
+  var conversionMap = {
+    whatsapp_appointment: 'AW-11094009700/Ads5CJjHr-UcEOTOhKop',
+    phone_call: 'AW-11094009700/jF5QCO35uuUcEOTOhKop'
+  };
+  document.addEventListener('click', function(event){
+    var link = event.target.closest && event.target.closest('[data-conversion]');
+    if (!link) return;
+    var eventName = link.getAttribute('data-conversion');
+    var sendTo = conversionMap[eventName];
+    if (!sendTo) return;
+    if (typeof window.gtag === 'function') {
+      window.gtag('event', 'conversion', {
+        send_to: sendTo,
+        value: 1.0,
+        currency: 'TRY'
+      });
+    }
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({event: eventName});
+  });
+})();
+</script>
 </body>
 </html>
